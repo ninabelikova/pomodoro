@@ -73,7 +73,7 @@ app.controller('MainControl', function($scope, $interval) {
       // countdown is finished
 
       // Play audio
-      var wav = 'http://www.oringz.com/oringz-uploads/sounds-917-communication-channel.mp3';
+      var wav = 'pewdslove.mp3';
       var audio = new Audio(wav);
 			audio.play();
 
