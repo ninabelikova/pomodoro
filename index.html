@@ -1,61 +1,71 @@
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>C'est un pomodoro</title>
-  <link href="style.css" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-  <script src="app.js"></script>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>C'est un pomodoro</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
 
-<body>
-  <div class="header">
-    <h1>C'est un pomodoro.</h1>
-    <p>Et ce pomodoro veut que tu travailles.</p>
-  </div>
+  <body ng-app="Pomodoro" ng-controller="MainControl">
 
-  <main ng-app="Pomodoro" ng-controller="MainControl">
+    <div class="header">
+      <!-- C'est un pomodoro -->
+      <h1>{{ title[current_language] }}</h1>
+      <!-- Et ce pomodoro veut que tu travailles. -->
+      <p>{{ intro[current_language]}}</p>
+    </div>
+
+    <main>
 
       <header>
-            <div class="session">
-      <div class="breakControl">
-        <p>se détendre</p>
-        <button ng-click="breakLengthChange(-1)" class="minus">-
-        </button>
+        <div class="session">
+          <div class="breakControl">
+            <!-- se détendre -->
+            <p>{{ relax[current_language]}}</p>
+            <button ng-click="breakLengthChange(-1)" class="minus">-
+            </button>
 
-        <span class="time">{{breakLength}}
-        </span>
+            <span class="time">{{breakLength}}
+            </span>
 
-        <button ng-click="breakLengthChange(1)" class="plus">+
-        </button>
-      </div>
+            <button ng-click="breakLengthChange(1)" class="plus">+
+            </button>
+          </div>
 
+          <div class="sessionControl">
+            <!-- travailler -->
+            <p>{{ work[current_language]}}</p>
+            <button ng-click="sessionLengthChange(-1)" class="minus">-</button>
 
-      <div class="sessionControl">
-        <p>travailler</p>
-        <button ng-click="sessionLengthChange(-1)" class="minus">-</button>
+            <span class='time'>{{sessionLength}}</span>
 
-        <span class='time'>{{sessionLength}}</span>
+            <button ng-click="sessionLengthChange(1)" class="plus">+</button>
+          </div>
 
-        <button ng-click="sessionLengthChange(1)" class="plus">+</button>
-      </div>
-
-    </div>
+        </div>
       </header>
 
+      <section ng-click="toggleTimer()">
+        <div class="timer">
+          <p class='title'>{{current_session_name[current_language]}}</p>
 
-    <section ng-click="toggleTimer()">
-      <div class="timer">
-        <p class='title'>{{sessionName}}</p>
+          <p>{{timeLeft}}</p>
+          <span ng-style="{'height':fillHeight, 'background':fillColor}" class="fill"></span>
+        </div>
 
-        <p>{{timeLeft}}</p>
-        <span ng-style="{'height':fillHeight, 'background':fillColor}" class="fill">
-        </span>
+      </section>
+
+      <div class="menu">
+        <button type="button" name="button" ng-click="switch_language('en')">english</button>
+        <button type="button" name="button" ng-click="switch_language('fr')">français</button>
+        <button type="button" name="button" ng-click="switch_language('hak')">客家話</button>
       </div>
 
-    </section>
+    </main>
 
 
-  </main>
-</body>
+
+  </body>
 
 </html>

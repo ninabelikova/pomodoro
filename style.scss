@@ -1,6 +1,15 @@
 @import "bourbon/bourbon";
-
 @import url(http://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300);
+
+@font-face {
+  src: url("assets/SentyZHAO.otf");
+  font-family: "Zhao";
+}
+
+@font-face {
+  src: url("assets/SentyPea.ttf");
+  font-family: "Pea";
+}
 
 // colors
 $green: #99CC00;
@@ -8,7 +17,7 @@ $black: #000000;
 $white: #fff;
 
 // variables
-$font: Avenir, Open Sans, Arial, sans-serif;
+$font:  Open Sans,'Zhao', Arial, sans-serif;
 
 * {
   margin: 0;
@@ -23,18 +32,18 @@ p {
 }
 
 html, body, main {
-  height: 100%;
+//  height: 100%;
   overflow: hidden;
   background-color: white;
+  color:#111;
 }
+
 
 h1 {
   display: block;
-
   margin: 0 auto;
-
   text-align: center;
-  font-family: 'Pacifico';
+  font-family: 'Pacifico', 'Pea';
   font-size: 4em;
 }
 
@@ -50,6 +59,7 @@ header {
   .session {
     font-size: .8em;
     display: flex;
+    color: #333;
     .breakControl, .sessionControl {
       display: inline;
       padding-left: 30px;
@@ -57,8 +67,7 @@ header {
     }
     .minus, .plus {
       background-color: white;
-
-
+      color:#333;
       border: none;
       cursor: pointer;
       font-size: 2em;
@@ -75,7 +84,7 @@ header {
 
 section {
 
-  height: 100%;
+  //height: 100%;
 
   .title {
     text-align: center;
@@ -114,5 +123,21 @@ section {
     right: 0;
     left: 0;
     z-index: -1;
+  }
+}
+
+
+
+.menu {
+
+  button {
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+    padding: .5em .9em .5em;
+    cursor: pointer;
+    font-size: .9em;
+    margin-left: 1em;
   }
 }

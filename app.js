@@ -1,10 +1,13 @@
+
 var app = angular.module('Pomodoro', []);
+
 app.controller('MainControl', function($scope, $interval) {
   $scope.breakLength = 5;
   $scope.sessionLength = 25;
   $scope.timeLeft = $scope.sessionLength;
   $scope.fillHeight = '0%';
   $scope.sessionName = 'je travaille';
+
   $scope.currentTotal;
 
   var runTimer = false;
@@ -81,12 +84,14 @@ app.controller('MainControl', function($scope, $interval) {
       $scope.fillColor = '#333333';
       if ($scope.sessionName === 'je me détends') {
         $scope.sessionName = 'je travaille';
+        $scope.current_session_name = $scope.working;
         $scope.currentLength = $scope.sessionLength;
         $scope.timeLeft = 60 * $scope.sessionLength;
         $scope.originalTime = $scope.sessionLength;
         secs = 60 * $scope.sessionLength;
       } else {
         $scope.sessionName = 'je me détends';
+        $scope.current_session_name = $scope.resting;
         $scope.currentLength = $scope.breakLength;
         $scope.timeLeft = 60 * $scope.breakLength;
         $scope.originalTime = $scope.breakLength;
@@ -104,6 +109,53 @@ app.controller('MainControl', function($scope, $interval) {
       var perc = Math.abs((secs / denom) * 100 - 100);
       $scope.fillHeight = perc + '%';
     }
-  }
+  };
+
+  /// Multilanguage stuff
+
+  $scope.current_language = 'fr';
+
+  $scope.title = {
+    fr: "C'est un pomodoro",
+    en: "It's a pomodoro",
+    hak: "這係桃麥朵鐘"
+  };
+
+  $scope.intro = {
+    fr: "Et ce pomodoro veut que tu travailles.",
+    en: "And this pomodoro wants you to work.",
+    hak: "遽遽來做事"
+  };
+
+  $scope.relax = {
+    fr: "se détendre",
+    en: "play",
+    hak: "敨氣尞一下"
+  };
+
+  $scope.work = {
+    fr: "travailler",
+    en: "work",
+    hak: "煞猛打拚"
+  };
+
+  $scope.working = {
+    fr: "je travaille",
+    en: "working",
+    hak: "做等事"
+  };
+
+  $scope.resting = {
+    fr: "je me détends",
+    en: "playing",
+    hak: "尞等"
+  };
+
+
+  $scope.switch_language = function (language) {
+    $scope.current_language = language;
+  };
+
+  $scope.current_session_name = $scope.working;
 
 });

@@ -1,7 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300);
+@font-face {
+  src: url("assets/SentyZHAO.otf");
+  font-family: "Zhao"; }
+@font-face {
+  src: url("assets/SentyPea.ttf");
+  font-family: "Pea"; }
 * {
   margin: 0;
-  font-family: Avenir, Open Sans, Arial, sans-serif; }
+  font-family: Open Sans, "Zhao", Arial, sans-serif; }
 
 p {
   text-align: center;
@@ -9,15 +15,15 @@ p {
   margin-top: 30px; }
 
 html, body, main {
-  height: 100%;
   overflow: hidden;
-  background-color: white; }
+  background-color: white;
+  color: #111; }
 
 h1 {
   display: block;
   margin: 0 auto;
   text-align: center;
-  font-family: 'Pacifico';
+  font-family: 'Pacifico', 'Pea';
   font-size: 4em; }
 
 header {
@@ -29,13 +35,15 @@ header {
   padding: 20px; }
   header .session {
     font-size: .8em;
-    display: flex; }
+    display: flex;
+    color: #333; }
     header .session .breakControl, header .session .sessionControl {
       display: inline;
       padding-left: 30px;
       padding-right: 30px; }
     header .session .minus, header .session .plus {
       background-color: white;
+      color: #333;
       border: none;
       cursor: pointer;
       font-size: 2em;
@@ -45,41 +53,49 @@ header {
       padding-left: 10px;
       padding-right: 10px; }
 
-section {
-  height: 100%; }
-  section .title {
-    text-align: center;
-    line-height: 180px;
-    font-size: .8em; }
-  section .timer {
-    margin: 0 auto;
-    text-align: center;
-    width: 350px;
-    height: 350px;
-    font-size: 3em;
-    border: 2px solid black;
-    border-radius: 50%;
-    cursor: pointer;
-    position: relative;
-    z-index: 20;
-    overflow: hidden; }
-    section .timer:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      border-radius: 50%;
-      z-index: 2;
-      border: 4px solid #000000; }
-  section .fill {
+section .title {
+  text-align: center;
+  line-height: 180px;
+  font-size: .8em; }
+section .timer {
+  margin: 0 auto;
+  text-align: center;
+  width: 350px;
+  height: 350px;
+  font-size: 3em;
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+  overflow: hidden; }
+  section .timer:before {
     content: '';
     position: absolute;
-    background: #99CC00;
+    top: 0;
     bottom: 0;
-    right: 0;
     left: 0;
-    z-index: -1; }
+    right: 0;
+    border-radius: 50%;
+    z-index: 2;
+    border: 4px solid #000000; }
+section .fill {
+  content: '';
+  position: absolute;
+  background: #99CC00;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1; }
+
+.menu button {
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  padding: .5em .9em .5em;
+  cursor: pointer;
+  font-size: .9em;
+  margin-left: 1em; }
 
 /*# sourceMappingURL=style.css.map */
