@@ -126,7 +126,7 @@ app.controller('MainControl', function($scope, $interval) {
   $scope.intro = {
     fr: "Et ce pomodoro veut que tu travailles.",
     en: "And this pomodoro wants you to work.",
-    hak: "遽遽來做事"
+    hak: "桃麥朵鐘愛你遽遽去做事"
   };
 
   $scope.relax = {
