@@ -32,11 +32,12 @@ p {
 }
 
 html, body, main {
-//  height: 100%;
+  height: 100%;
   overflow: hidden;
   background-color: white;
   color:#111;
 }
+
 
 
 h1 {
@@ -59,7 +60,6 @@ header {
   .session {
     font-size: .8em;
     display: flex;
-    color: #333;
     .breakControl, .sessionControl {
       display: inline;
       padding-left: 30px;
@@ -67,7 +67,6 @@ header {
     }
     .minus, .plus {
       background-color: white;
-      color:#333;
       border: none;
       cursor: pointer;
       font-size: 2em;
@@ -88,7 +87,7 @@ section {
 
   .title {
     text-align: center;
-    line-height: 180px;
+    line-height: 120px;
     font-size: .8em;
   }
   .timer {

@@ -7,7 +7,7 @@ app.controller('MainControl', function($scope, $interval) {
   $scope.timeLeft = $scope.sessionLength;
   $scope.fillHeight = '0%';
   $scope.sessionName = 'je travaille';
-
+  $scope.clock_on = false;
   $scope.currentTotal;
 
   var runTimer = false;
@@ -64,9 +64,11 @@ app.controller('MainControl', function($scope, $interval) {
 
       updateTimer();
       runTimer = $interval(updateTimer,  1000);
+      $scope.clock_on = true;
     } else {
       $interval.cancel(runTimer);
       runTimer = false;
+      $scope.clock_on = false;
     }
   }
 

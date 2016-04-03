@@ -49,7 +49,8 @@
       <section ng-click="toggleTimer()">
         <div class="timer">
           <p class='title'>{{current_session_name[current_language]}}</p>
-
+          <img src="assets/play.png" ng-show="!clock_on" alt="" />
+          <img src="assets/pause.png" ng-show="clock_on">
           <p>{{timeLeft}}</p>
           <span ng-style="{'height':fillHeight, 'background':fillColor}" class="fill"></span>
         </div>

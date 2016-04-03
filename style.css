@@ -15,6 +15,7 @@ p {
   margin-top: 30px; }
 
 html, body, main {
+  height: 100%;
   overflow: hidden;
   background-color: white;
   color: #111; }
@@ -35,15 +36,13 @@ header {
   padding: 20px; }
   header .session {
     font-size: .8em;
-    display: flex;
-    color: #333; }
+    display: flex; }
     header .session .breakControl, header .session .sessionControl {
       display: inline;
       padding-left: 30px;
       padding-right: 30px; }
     header .session .minus, header .session .plus {
       background-color: white;
-      color: #333;
       border: none;
       cursor: pointer;
       font-size: 2em;
@@ -55,7 +54,7 @@ header {
 
 section .title {
   text-align: center;
-  line-height: 180px;
+  line-height: 120px;
   font-size: .8em; }
 section .timer {
   margin: 0 auto;
