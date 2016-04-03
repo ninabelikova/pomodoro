@@ -1,13 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300);
 @font-face {
-  src: url("assets/SentyZHAO.otf");
-  font-family: "Zhao"; }
-@font-face {
   src: url("assets/SentyPea.ttf");
   font-family: "Pea"; }
 * {
   margin: 0;
-  font-family: Open Sans, "Zhao", Arial, sans-serif; }
+  font-family: Open Sans, Arial, sans-serif; }
 
 p {
   text-align: center;

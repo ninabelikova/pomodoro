@@ -1,10 +1,6 @@
 @import "bourbon/bourbon";
 @import url(http://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300);
 
-@font-face {
-  src: url("assets/SentyZHAO.otf");
-  font-family: "Zhao";
-}
 
 @font-face {
   src: url("assets/SentyPea.ttf");
@@ -17,7 +13,7 @@ $black: #000000;
 $white: #fff;
 
 // variables
-$font:  Open Sans,'Zhao', Arial, sans-serif;
+$font:  Open Sans, Arial, sans-serif;
 
 * {
   margin: 0;
