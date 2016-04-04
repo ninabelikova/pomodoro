@@ -2,6 +2,8 @@
   <head>
     <meta charset="utf-8">
     <title>C'est un pomodoro</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script src="app.js"></script>
@@ -49,8 +51,10 @@
       <section ng-click="toggleTimer()">
         <div class="timer">
           <p class='title'>{{current_session_name[current_language]}}</p>
-          <img src="assets/play.png" ng-show="!clock_on" alt="" />
-          <img src="assets/pause.png" ng-show="clock_on">
+
+          <i class="material-icons md-48" ng-show="!clock_on">play_arrow</i>
+
+          <i class="material-icons md-48"  ng-show="clock_on">pause</i>
           <p>{{timeLeft}}</p>
           <span ng-style="{'height':fillHeight, 'background':fillColor}" class="fill"></span>
         </div>
