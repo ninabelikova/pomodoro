@@ -14,7 +14,11 @@ html, body, main {
   height: 100%;
   overflow: hidden;
   background-color: #f7f6de;
-  color: #530c0c; }
+  color: #530c0c;
+  box-sizing: border-box; }
+
+body {
+  position: relative; }
 
 h1 {
   display: block;
@@ -88,15 +92,21 @@ section .fill {
   left: 0;
   z-index: -1; }
 
-.menu button {
-  border: none;
-  border-radius: 5px;
-  background: #fa7e0a;
-  color: #f7f6de;
-  padding: .5em .9em .5em;
-  cursor: pointer;
-  font-size: .9em;
-  margin-left: 1em; }
+.menu {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1em; }
+  .menu button {
+    border: none;
+    border-radius: 5px;
+    background: #fa7e0a;
+    color: #f7f6de;
+    padding: .5em .9em .5em;
+    cursor: pointer;
+    font-size: .9em;
+    margin-left: 1em; }
 
 .header {
   margin-top: 3.5em; }

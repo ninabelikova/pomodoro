@@ -37,8 +37,12 @@ html, body, main {
   overflow: hidden;
   background-color: $beigeish2;
   color:$maroonish;
+  box-sizing: border-box;
 }
 
+body {
+  position: relative;
+}
 
 
 h1 {
@@ -86,6 +90,8 @@ header {
     }
   }
 }
+
+
 
 section {
 
@@ -137,6 +143,12 @@ section {
 
 .menu {
 
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1em;
+  
   button {
     border: none;
     border-radius: 5px;
