@@ -80,10 +80,16 @@ header {
   .session {
     font-size: .8em;
     display: flex;
+
     .breakControl, .sessionControl {
       display: inline;
       padding-left: 30px;
       padding-right: 30px;
+
+      @media screen and (max-width: 520px) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
     }
     .minus, .plus {
       background-color: transparent;

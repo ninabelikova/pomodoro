@@ -51,6 +51,10 @@ header {
       display: inline;
       padding-left: 30px;
       padding-right: 30px; }
+      @media screen and (max-width: 520px) {
+        header .session .breakControl, header .session .sessionControl {
+          padding-left: 20px;
+          padding-right: 20px; } }
     header .session .minus, header .session .plus {
       background-color: transparent;
       border: none;
