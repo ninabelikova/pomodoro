@@ -26,6 +26,9 @@ h1 {
   text-align: center;
   font-family: 'Pacifico', 'Pea';
   font-size: 4em; }
+  @media screen and (max-width: 520px) {
+    h1 {
+      font-size: 3em; } }
 
 header {
   display: flex;
