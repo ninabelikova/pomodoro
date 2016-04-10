@@ -117,11 +117,10 @@ section .fill {
   z-index: -1; }
 
 .menu {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1em; }
+  position: relative; }
+  @media screen and (max-width: 520px) {
+    .menu {
+      position: relative; } }
   .menu button {
     border: none;
     border-radius: 5px;
@@ -143,6 +142,9 @@ section .fill {
   @media screen and (max-width: 520px) {
     .header {
       margin-top: 1.5em; } }
+
+.cute-round-clock {
+  padding-bottom: 3em; }
 
 /* Rules for sizing the icon. */
 .material-icons.md-18 {

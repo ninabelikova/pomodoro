@@ -172,15 +172,22 @@ section {
     left: 0;
     z-index: -1;
   }
+
 }
 
 .menu {
 
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1em;
+//  position: absolute;
+//  right: 0;
+//  bottom: 0;
+//  left: 0;
+//  padding: 1em;
+  position: relative;
+
+  @media screen and (max-width: 520px) {
+    position: relative;
+  }
+
 
   button {
     border: none;
@@ -210,6 +217,11 @@ section {
   @media screen and (max-width: 520px) {
     margin-top: 1.5em;
   }
+}
+
+
+.cute-round-clock {
+    padding-bottom: 3em;
 }
 
 /* Rules for sizing the icon. */
