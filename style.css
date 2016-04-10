@@ -40,6 +40,9 @@ header {
   margin: 0 auto;
   text-transform: uppercase;
   padding: 20px; }
+  @media screen and (max-width: 520px) {
+    header {
+      padding: 10px; } }
   header p {
     margin-top: 30px; }
   header .session {
@@ -63,8 +66,8 @@ header {
       @media screen and (max-width: 520px) {
         header .session .time {
           font-size: 2em;
-          padding-left: 5px;
-          padding-right: 5px; } }
+          padding-left: 2.5px;
+          padding-right: 2.5px; } }
 
 section p {
   margin-top: 30px; }
@@ -135,6 +138,9 @@ section .fill {
   margin-top: 3.5em; }
   .header p {
     line-height: 1.65; }
+  @media screen and (max-width: 520px) {
+    .header {
+      margin-top: 1.5em; } }
 
 /* Rules for sizing the icon. */
 .material-icons.md-18 {
