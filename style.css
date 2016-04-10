@@ -67,7 +67,7 @@ header {
       padding-right: 10px; }
       @media screen and (max-width: 520px) {
         header .session .time {
-          font-size: 2em;
+          font-size: 1.7em;
           padding-left: 2.5px;
           padding-right: 2.5px; } }
 
