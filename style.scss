@@ -52,7 +52,7 @@ h1 {
   display: block;
   margin: 0 auto;
   text-align: center;
-  font-family: 'Pacifico', 'Pea';
+  font-family: 'Pacifico', 'Pea', sans-serif;
   font-size: 4em;
 
   @media screen and (max-width: 520px) {
@@ -183,12 +183,12 @@ section {
 
 .menu {
 
-//  position: absolute;
-//  right: 0;
-//  bottom: 0;
-//  left: 0;
+  position: fixed;
+  right: 0;
+  bottom: 1em;
+  left: 0;
 //  padding: 1em;
-  position: relative;
+
 
   @media screen and (max-width: 520px) {
     position: relative;
@@ -211,6 +211,62 @@ section {
     }
 
   }
+
+  .language-buttons {
+    float: left;
+  }
+
+  .info {
+    float: right;
+    padding: 0 3em 0;
+
+    @media screen and (max-width: 520px) {
+      display: none;
+    }
+
+    a {
+      color: $orangeish;
+      font-weight: bold;
+      border: 2px solid $orangeish;
+      padding: .5em .9em .5em;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: .9em;
+
+
+    }
+  }
+
+
+  .hints {
+    display: inline-block;
+    position: relative;
+    margin-left: .5em;
+  }
+
+  .hints:hover:after{
+    content: attr(title);
+    background: $maroonish;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 15px;
+    position: absolute;
+    bottom: 26px;
+    left: -55%;
+    z-index: 98;
+    width: 220px;
+  }
+
+  .hints:hover:before{
+    border: solid;
+    border-color: $maroonish transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 20px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 99;
+}
 }
 
 .header {

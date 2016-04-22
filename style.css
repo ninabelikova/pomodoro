@@ -26,7 +26,7 @@ h1 {
   display: block;
   margin: 0 auto;
   text-align: center;
-  font-family: 'Pacifico', 'Pea';
+  font-family: 'Pacifico', 'Pea', sans-serif;
   font-size: 4em; }
   @media screen and (max-width: 520px) {
     h1 {
@@ -121,7 +121,10 @@ section .fill {
   z-index: -1; }
 
 .menu {
-  position: relative; }
+  position: fixed;
+  right: 0;
+  bottom: 1em;
+  left: 0; }
   @media screen and (max-width: 520px) {
     .menu {
       position: relative; } }
@@ -138,6 +141,46 @@ section .fill {
       .menu button {
         font-size: .7em;
         margin-left: .7em; } }
+  .menu .language-buttons {
+    float: left; }
+  .menu .info {
+    float: right;
+    padding: 0 3em 0; }
+    @media screen and (max-width: 520px) {
+      .menu .info {
+        display: none; } }
+    .menu .info a {
+      color: #fa7e0a;
+      font-weight: bold;
+      border: 2px solid #fa7e0a;
+      padding: .5em .9em .5em;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: .9em; }
+  .menu .hints {
+    display: inline-block;
+    position: relative;
+    margin-left: .5em; }
+  .menu .hints:hover:after {
+    content: attr(title);
+    background: #530c0c;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 15px;
+    position: absolute;
+    bottom: 26px;
+    left: -55%;
+    z-index: 98;
+    width: 220px; }
+  .menu .hints:hover:before {
+    border: solid;
+    border-color: #530c0c transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 20px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 99; }
 
 .header {
   margin-top: 3.5em; }
