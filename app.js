@@ -9,6 +9,7 @@ app.controller('MainControl', function($scope, $interval) {
   $scope.sessionName = 'je travaille';
   $scope.clock_on = false;
   $scope.currentTotal;
+  $scope.session_count = 0;
 
   var runTimer = false;
   var secs = 60 * $scope.timeLeft;
@@ -92,6 +93,7 @@ app.controller('MainControl', function($scope, $interval) {
         $scope.originalTime = $scope.sessionLength;
         secs = 60 * $scope.sessionLength;
       } else {
+        $scope.session_count += 1;
         $scope.sessionName = 'je me détends';
         $scope.current_session_name = $scope.resting;
         $scope.currentLength = $scope.breakLength;
