@@ -42,7 +42,7 @@ app.controller('MainControl', function($scope, $interval) {
 
   // Change default break length
   $scope.breakLengthChange = function(time) {
-    if (!runTimer){
+    if (!runTimer) {
       $scope.breakLength += time;
       if ($scope.breakLength < 0) {
         $scope.breakLength = 0;
